@@ -249,9 +249,9 @@ Test set performance:
 \end{itemize}
 
 AlexNet seems a good model.
-The performance on the test set are not as good as the performance on the train set but this is quite obvious.
+The performance on the test set are not as good as the performance on the train set but this is obvious.
 
-81% of accuracy is great for a network trained on such small dataset.
+81\% of accuracy is great for a network trained on such small dataset.
 Loss is quite high but tolerable.
 
 We also tried to enlarge the input shape.
@@ -321,7 +321,7 @@ As seen before, LeNet is a bad model on this dataset so we started from it with 
 
 We created 3 versions of AndreaNet with different parameters tuning and in the end, it is a completely new neural network.
 
-\subsection**{Version 1}
+\subsection*{Version 1}
 
 This is the diff of the LeNet layers and AndreaNet v1 layers:
 
@@ -347,6 +347,13 @@ All of them uses the tanh activation function except for the last that uses soft
 As you can see in the diff we enlarged the size of kernels to test if this can be a tuning that allows the net to perform better.
 After all layers, we also added BatchNormalization, one of the advantages of AlexNet, and this helped us to create a deeper network that is, generally, better.
 We also added a convolutional layer and a larger dense layer for the creation of a deeper network.
+
+But why deeper is better? As explained in a clear way here
+
+(\verb|https://www.quora.com/Why-are-deeper-neural-networks-better-than-wider-networks|)
+
+in theory 2 hidden layers are enough but a deeper networks needs less neorons to reach results like the 2 hidden layers network, so it is a way to increase the results quality without increasing too much the training an the convergence time.
+
 \bigskip
 Input shape: 320x320.
 
@@ -515,7 +522,7 @@ Parameters:
 \begin{tikzpicture}
     \begin{axis}[
         width=13cm, height=10cm,
-        ymin=0, ymax=2,
+        ymin=0, ymax=1.8,
         xmin=1, xmax=26,
         axis x line=bottom,
         axis y line=left,
@@ -589,7 +596,7 @@ Parameters:
 \begin{tikzpicture}
     \begin{axis}[
         width=13cm, height=10cm,
-        ymin=0, ymax=2,
+        ymin=0, ymax=1.6,
         xmin=1, xmax=43,
         axis x line=bottom,
         axis y line=left,
@@ -644,7 +651,7 @@ Parameters:
 \begin{tikzpicture}
     \begin{axis}[
         width=13cm, height=10cm,
-        ymin=0, ymax=2,
+        ymin=0, ymax=1.6,
         xmin=1, xmax=49,
         axis x line=bottom,
         axis y line=left,
